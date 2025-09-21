@@ -23,11 +23,12 @@ declare module '@mui/material/Button' {
   }
 }
 
+// 定义主题
 let theme = createTheme({
   // 将主题自定义写在这里
 });
 
-// 定义主题
+// 创建新调色板
 theme = createTheme(theme, {
   palette: {
     ochre: theme.palette.augmentColor({

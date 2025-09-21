@@ -1,14 +1,19 @@
 import { serve } from "@hono/node-server";
 import bcrypt from "bcrypt";
-import "dotenv/config";
 import { Hono } from "hono";
 import jwt from "jsonwebtoken";
 import validator from "validator";
 import { PrismaClient } from "./generated/prisma/index.js";
 
-// JWT Key
-const secretKey: string | undefined = process.env.JWT_TOKEN;
+import dotenv from "dotenv";
+dotenv.config(); // 手动加载 .env 文件
 
+// JWT Key
+const secretKey: string | undefined = process.env.JWT_SECRET;
+
+if (!secretKey) {
+  throw new Error("Missing JWT_SECRET environment variable");
+}
 // 一些工具函数
 // 密码加密
 const hashPassword = async (password: string) => {
@@ -25,6 +30,10 @@ const generateToken = (data: object): string => {
   return jwt.sign(data, secretKey!, { expiresIn: "1h" });
 };
 
+// -------------------
+//       中间件
+// -------------------
+
 // 数据库
 const prisma = new PrismaClient();
 
@@ -32,7 +41,7 @@ const app = new Hono();
 
 // 定义状态码
 enum APP_CODES {
-  GENERAL_HEALTY = "GENERAL_HEALTY",
+  HEALTY = "HEALTY",
   USER_CREATE = "USER_CREATE",
   NOT_JSON = "NOT_JSON",
   NO_EMAIL_OR_PASSWORD = "NO_EMAIL_OR_PASSWORD",
@@ -48,7 +57,7 @@ app.get("/", (c) => {
 
 // 健康检查
 app.all("/healthy", (c) => {
-  return c.json({ status: APP_CODES.GENERAL_HEALTY });
+  return c.json({ status: APP_CODES.HEALTY });
 });
 
 // 创建用户
@@ -59,7 +68,6 @@ app.post("/users", async (c) => {
   try {
     body = await c.req.json<{ email: string; password: string }>();
   } catch (e) {
-    console.error(e);
     return c.json({ status: APP_CODES.NOT_JSON }, 400);
   }
 
@@ -93,7 +101,6 @@ app.post("/users", async (c) => {
       },
     });
   } catch (e) {
-    console.error(e);
     return c.json({ status: APP_CODES.USER_ERROR }, 500);
   }
 

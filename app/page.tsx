@@ -10,17 +10,17 @@ import * as React from 'react';
 // 使调色板包含自定义颜色
 declare module '@mui/material/styles' {
   interface Palette {
-    ochre: Palette['primary'];
+    aqua: Palette['primary'];
   }
   interface PaletteOptions {
-    ochre?: PaletteOptions['primary'];
+    aqua?: PaletteOptions['primary'];
   }
 }
 
 // 更新按钮的颜色选项来包含自定义颜色
 declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
-    ochre: true;
+    aqua: true;
   }
 }
 
@@ -32,11 +32,11 @@ let theme = createTheme({
 // 创建新调色板
 theme = createTheme(theme, {
   palette: {
-    ochre: theme.palette.augmentColor({
+    aqua: theme.palette.augmentColor({
       color: {
-        main: '#E3D026',
+        main: '#0085cc',
       },
-      name: 'ochre',
+      name: 'aqua',
     }),
   },
 });
@@ -47,8 +47,8 @@ export default function Home() {
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
       <div>
         <Stack direction="row" spacing={2} className="app-bar-light">
-          <Button varaint="contanined" color="ochre">Home</Button>
-          <Button varaint="contanined" color="ochre">Pricing</Button>
+          <Button varaint="contained" sx={{bgcolor:"aqua.dark", color:"white"}}>Home</Button>
+          <Button varaint="contained" sx={{bgcolor:"aqua.main", color:"white"}}>Pricing</Button>
         </Stack>
       </div>
     </ThemeProvider>

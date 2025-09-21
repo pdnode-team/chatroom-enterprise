@@ -3,7 +3,9 @@ import { Hono } from "hono";
 import { rateLimiter } from "hono-rate-limiter";
 import createUser from "../services/users/create.js";
 import loginUser from "../services/users/login.js";
-import { getClientKey } from "../tools.js";
+import createEmailVerify from "../services/users/createEmailVerify.js";
+import { getClientKey,isLogin } from "../tools.js";
+
 
 const router = new Hono();
 
@@ -15,6 +17,8 @@ router.use(rateLimiter({
     standardHeaders: "draft-6", // 返回速率限制信息
 }));
 
+router.use("/email/create",isLogin)
+
 router.post("/register", async (c) => {
     return await createUser(c);
 });
@@ -22,5 +26,9 @@ router.post("/register", async (c) => {
 router.post("/login", async (c) => {
     return await loginUser(c);
 });
+
+router.post("/email/create", async (c) => {
+    return await createEmailVerify(c);
+})
 
 export default router;

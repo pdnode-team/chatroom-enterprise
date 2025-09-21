@@ -10,7 +10,7 @@ router.get("/", (c) => {
 
 // 健康检查
 router.all("/healthy", (c) => {
-    return c.json({ status: APP_CODES.HEALTY });
+    return c.json({ status: APP_CODES.HEALTHY });
 });
 
 export default router;

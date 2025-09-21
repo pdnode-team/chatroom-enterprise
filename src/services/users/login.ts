@@ -17,7 +17,7 @@ const loginUser = async (c: Context) => {
     // 检查用户是否提供密码和邮箱
     if (!body.email || !body.password) {
         return c.json(
-            { status: APP_CODES.NO_EMAIL_OR_PASSWORD },
+            { status: APP_CODES.MISSING_ARGUMENTS },
             400,
         );
     }

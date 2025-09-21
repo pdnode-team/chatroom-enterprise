@@ -46,7 +46,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
       <div>
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} className="app-bar-light">
           <Button varaint="contanined" color="ochre">Home</Button>
           <Button varaint="contanined" color="ochre">Pricing</Button>
         </Stack>

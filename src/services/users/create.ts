@@ -1,10 +1,10 @@
 import type { Context } from "hono";
 import validator from "validator";
-import { APP_CODES } from "../codes.js";
-import { prisma } from "../init.js";
-import { generateToken, hashPassword } from "../tools.js";
+import { APP_CODES } from "../../codes.js";
+import { prisma } from "../../init.js";
+import { generateToken, hashPassword } from "../../tools.js";
 
-export const createUser = async (c: Context) => {
+const createUser = async (c: Context) => {
     let body;
 
     // 检查是否是JSON
@@ -53,3 +53,4 @@ export const createUser = async (c: Context) => {
     //创建成功
     return c.json({ status: APP_CODES.USER_CREATE, user, token }, 201);
 };
+export default createUser;

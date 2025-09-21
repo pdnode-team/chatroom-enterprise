@@ -19,3 +19,14 @@ export const verifyPassword = async (hash: string, password: string) => {
 export const generateToken = (data: object): string => {
     return jwt.sign(data, secretKey!, { expiresIn: "1h" });
 };
+
+// JWT验证
+
+export const verifyToken = (token: string): boolean => {
+    try {
+        const decoded = jwt.verify(token, secretKey!); // 返回 string | JwtPayload
+        return true; // 如果没有抛异常，就返回 true
+    } catch (err) {
+        return false; // 验证失败返回 false
+    }
+};

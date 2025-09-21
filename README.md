@@ -1,6 +1,6 @@
 # Pdnode ChatRooM Enterprise
 
 ## CODES
-请看 `src/index.ts`
+请看 `src/codes.ts`
 
-然后搜索初始化，找到APP_CODES即可。
+找到APP_CODES即可。

@@ -1,6 +1,7 @@
 "use client";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { darken } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Link from "@mui/material/Link";
 import Stack from '@mui/material/Stack';
@@ -50,10 +51,18 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
-      <div>
+      <div style={{alignItems:"center"}}>
         <Stack direction="row" spacing={2} className="app-bar-light">
           <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
-            <Button href="/" varaint="contained" sx={{bgcolor:"aqua.dark", color:"white", borderRadius:"100px", height:"3.4vh"}}>
+            <Button href="/" varaint="contained" color="aqua"
+                    sx={{backgroundColor:"aqua.dark",
+                      color:"white",
+                      borderRadius:"100px",
+                      height:"3.4vh",
+                      "&:hover": {
+                        backgroundColor: (theme) => darken(theme.palette.aqua.dark, 0.2),
+                      },
+            }}>
               <HomeIcon sx={{fontSize:"2.5vh"}}/>
             </Button>
             <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>

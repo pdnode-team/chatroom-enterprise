@@ -44,7 +44,7 @@ theme = createTheme(theme, {
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
-      <title>PdNode Chat Enterprise - Instant messaging Service for business</title>
+      <title>PdNode Chat Enterprise - Instant messaging service for business</title>
       <div>
         <Stack></Stack>
       </div>

@@ -55,7 +55,8 @@ export default function Home() {
         <Stack direction="row" spacing={2} className="app-bar-light">
           <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
             <Button href="/" varaint="contained" color="aqua"
-                    sx={{backgroundColor:"aqua.dark",
+                    sx={{
+                      backgroundColor:"aqua.dark",
                       color:"white",
                       borderRadius:"100px",
                       height:"3.4vh",
@@ -68,7 +69,15 @@ export default function Home() {
             <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
           </Stack>
           <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
-            <Button href="/pricing" varaint="contained" sx={{bgcolor:"aqua.main", color:"white", borderRadius:"100px", height:"3.4vh"}}>
+            <Button href="/pricing" varaint="contained" color="aqua"
+                    sx={{backgroundColor:"aqua.main",
+                      color:"white",
+                      borderRadius:"100px",
+                      height:"3.4vh",
+                      "&:hover": {
+                        backgroundColor: (theme) => darken(theme.palette.aqua.main, 0.2),
+                      },
+            }}>
               <SellIcon sx={{fontSize:"2.2vh"}}/>
             </Button>
             <Link href="/pricing" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Pricing</Typography></Link>

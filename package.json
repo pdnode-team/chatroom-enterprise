@@ -12,6 +12,7 @@
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.2",
     "hono": "^4.9.8",
+    "hono-rate-limiter": "^0.4.2",
     "jsonwebtoken": "^9.0.2",
     "validator": "^13.15.15"
   },

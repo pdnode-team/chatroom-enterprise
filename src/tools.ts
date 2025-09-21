@@ -1,4 +1,6 @@
+import { getConnInfo } from "@hono/node-server/conninfo";
 import bcrypt from "bcrypt";
+import type { Context } from "hono";
 import jwt from "jsonwebtoken";
 import { secretKey } from "./init.js";
 
@@ -29,4 +31,24 @@ export const verifyToken = (token: string): boolean => {
     } catch (err) {
         return false; // 验证失败返回 false
     }
+};
+
+// 速率限制
+export const getClientKey = (c: Context): string => {
+    // 优先使用代理头部（X-Forwarded-For 或 CF-Connecting-IP）
+    const forwardedFor = c.req.header("X-Forwarded-For") ||
+        c.req.header("CF-Connecting-IP");
+    if (forwardedFor) {
+        // 有可能是多个 IP，取第一个
+        return forwardedFor.split(",")[0].trim();
+    }
+
+    // Node 原生环境：使用 getConnInfo
+    const info = getConnInfo(c);
+    if (info.remote.address) {
+        return info.remote.address;
+    }
+
+    // Fallback
+    return "unknown";
 };

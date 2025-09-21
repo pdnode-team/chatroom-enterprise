@@ -1,10 +1,10 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { rateLimiter } from "hono-rate-limiter";
 import { secretKey } from "./init.js";
-import userRoutes from "./routes/users.js";
-
 import indexRoutes from "./routes/index.js";
-
+import userRoutes from "./routes/users.js";
+import { getClientKey } from "./tools.js";
 // ----------
 //  检查设置
 // ----------
@@ -24,6 +24,15 @@ export const app = new Hono();
 // ----------
 app.route("/", indexRoutes);
 app.route("/users", userRoutes);
+
+app.use(
+  rateLimiter({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    limit: 100,
+    standardHeaders: "draft-6",
+    keyGenerator: getClientKey,
+  }),
+);
 
 // 启动服务
 serve({

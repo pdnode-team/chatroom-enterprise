@@ -1,7 +1,7 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { rateLimiter } from "hono-rate-limiter";
-import { secretKey } from "./init.js";
+import { PORT, secretKey } from "./init.js";
 import indexRoutes from "./routes/index.js";
 import userRoutes from "./routes/users.js";
 import { getClientKey } from "./tools.js";
@@ -37,7 +37,7 @@ app.use(
 // 启动服务
 serve({
   fetch: app.fetch,
-  port: 3000,
+  port: Number(PORT),
 }, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`);
 });

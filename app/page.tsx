@@ -22,10 +22,11 @@ declare module '@mui/material/Button' {
 
 let theme = createTheme({
   // Theme customization goes here as usual, including tonalOffset and/or
-  // contrastThreshold as the augmentColor() function relies on these
+  // 函数augmentColor()依赖此局部变量
 });
 
-const theme = createTheme(theme,{
+// 定义主题
+theme = createTheme(theme, {
   palette: {
     ochre: theme.palette.augmentColor({
       color: {
@@ -38,8 +39,7 @@ const theme = createTheme(theme,{
 
 export default function Home() {
   return (
-    <React.Fragment>
-
-    </React.Fragment>
+    <ThemeProvider theme={theme}>
+    </ThemeProvider>
   );
 }

@@ -3,9 +3,11 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { darken } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import Link from "@mui/material/Link";
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Tooltip from "@mui/material/Tooltip";
 
 import HomeIcon from '@mui/icons-material/Home';
 import SellIcon from '@mui/icons-material/Sell';
@@ -82,6 +84,11 @@ export default function Home() {
             </Button>
             <Link href="/pricing" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Pricing</Typography></Link>
           </Stack>
+        </Stack>
+        <Stack sx={{justifyItems:"center", alignItems:"center", justifyContent:"center"}}>
+          <Tooltip title="Visit Main Website">
+            <IconButton href="https://www.pdnode.com" target="_blank" sx={{background:"none", outline:"#555555FF solid 1px", borderRadius:"100px", width:"3rem", height:"3rem"}}><HomeIcon sx={{color:"rgb(108,108,108)", fontSize:"1.7rem"}}/></IconButton>
+          </Tooltip>
         </Stack>
       </div>
     </ThemeProvider>

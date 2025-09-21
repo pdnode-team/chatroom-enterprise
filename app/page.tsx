@@ -2,7 +2,11 @@
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import Link from "@mui/material/Link";
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+
+import HomeIcon from '@mui/icons-material/Home';
 
 import Image from "next/image";
 import * as React from 'react';
@@ -47,7 +51,10 @@ export default function Home() {
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
       <div>
         <Stack direction="row" spacing={2} className="app-bar-light">
-          <Button varaint="contained" sx={{bgcolor:"aqua.dark", color:"white"}}>Home</Button>
+          <Stack direction="column" className="app-bar-button-container" spacing={0.4}>
+            <Button href="/" varaint="contained" sx={{bgcolor:"aqua.dark", color:"white", borderRadius:"100px"}}>Home</Button>
+            <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"white", fontSize:"0.9rem"}}>Home</Typography></Link>
+          </Stack>
           <Button varaint="contained" sx={{bgcolor:"aqua.main", color:"white"}}>Pricing</Button>
         </Stack>
       </div>

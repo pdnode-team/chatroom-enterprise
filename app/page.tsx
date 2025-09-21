@@ -53,10 +53,17 @@ export default function Home() {
       <div>
         <Stack direction="row" spacing={2} className="app-bar-light">
           <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
-            <Button href="/" varaint="contained" sx={{bgcolor:"aqua.dark", color:"white", borderRadius:"100px", height:"3.4vh"}}><HomeIcon/></Button>
-            <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"white", fontSize:"0.9rem"}}>Home</Typography></Link>
+            <Button href="/" varaint="contained" sx={{bgcolor:"aqua.dark", color:"white", borderRadius:"100px", height:"3.4vh"}}>
+              <HomeIcon sx={{fontSize:"2.5vh"}}/>
+            </Button>
+            <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
           </Stack>
-          <Button varaint="contained" sx={{bgcolor:"aqua.main", color:"white", borderRadius:"100px", height:"3.4vh"}}><SellIcon/></Button>
+          <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+            <Button href="/pricing" varaint="contained" sx={{bgcolor:"aqua.main", color:"white", borderRadius:"100px", height:"3.4vh"}}>
+              <SellIcon sx={{fontSize:"2.2vh"}}/>
+            </Button>
+            <Link href="/pricing" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Pricing</Typography></Link>
+          </Stack>
         </Stack>
       </div>
     </ThemeProvider>

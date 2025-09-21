@@ -2,6 +2,7 @@
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 import Image from "next/image";
 import * as React from 'react';
@@ -43,6 +44,9 @@ theme = createTheme(theme, {
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
+      <div>
+        <Stack></Stack>
+      </div>
     </ThemeProvider>
   );
 }

@@ -1,4 +1,7 @@
+"use client";
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
 import Image from "next/image";
 import * as React from 'react';
@@ -21,8 +24,7 @@ declare module '@mui/material/Button' {
 }
 
 let theme = createTheme({
-  // Theme customization goes here as usual, including tonalOffset and/or
-  // 函数augmentColor()依赖此局部变量
+  // 将主题自定义写在这里
 });
 
 // 定义主题

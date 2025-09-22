@@ -122,7 +122,11 @@ export default function Home() {
                         borderWidth:" 3px",
                         height:"70px",
                         fontSize:"1.3rem",
-                        padding:"25px"
+                        padding:"25px",
+                        "&:hover": {
+                          padding: "30px",
+                        },
+                        transition:"padding 0.2s"
               }}>
                 View Pricing
               </Button>
@@ -132,7 +136,11 @@ export default function Home() {
                         textTransform:"none",
                         height:"70px",
                         fontSize:"1.3rem",
-                        padding:"30px"
+                        padding:"30px",
+                        "&:hover": {
+                          padding: "35px",
+                        },
+                        transition:"padding 0.2s"
               }}>
                 Learn More
               </Button>

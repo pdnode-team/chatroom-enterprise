@@ -1,6 +1,6 @@
 # PdNode Chat Enterprise
 
-[API & Wiki](https://github.com/pdnode-team/chatroom-enterprise)
+[API & Wiki](https://github.com/pdnode-team/chatroom-enterprise/wiki)
 
 **Only the code is publicly available. Unauthorized copying, reproduction, or borrowing is prohibited.**
 

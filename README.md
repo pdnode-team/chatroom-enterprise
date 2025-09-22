@@ -1,6 +1,10 @@
-# Pdnode ChatRooM Enterprise
+# PdNode Chat Enterprise
 
-## CODES
-请看 `src/codes.ts`
+[API & Wiki](https://github.com/pdnode-team/chatroom-enterprise/wiki)
 
-找到APP_CODES即可。
+**Only the code is publicly available. Unauthorized copying, reproduction, or borrowing is prohibited.**
+
+**This codebase is not open source. Please carefully review the open source definition.**
+
+Pdnode 2025 © All rights reserved
+

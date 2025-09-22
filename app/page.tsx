@@ -115,8 +115,8 @@ export default function Home() {
             <Typography variant="h2" sx={{marginTop:"20px"}}>PdNode Chat Enterprise</Typography>
             <Typography variant="h5">Instant messaging service for business</Typography>
             <Stack direction="row" spacing={0.3} sx={{marginTop:"2vh", marginBottom:"20px"}}>
-              <Button variant="outlined" className="pricing-button" size={"large"} sx={{borderRadius:"10px", boxShadow:"none", textTransform:"none", borderWidth:" 2px", height:"70px"}}>View Pricing</Button>
-              <Button variant="contained" className="learn-more-button" size={"large"} sx={{borderRadius:"100px", boxShadow:"none", textTransform:"none", height:"70px"}}>Learn More</Button>
+              <Button variant="outlined" className="pricing-button" size={"large"} sx={{borderRadius:"13px", boxShadow:"none", textTransform:"none", borderWidth:" 3px", height:"70px", fontSize:"1.3rem", padding:"25px"}}>View Pricing</Button>
+              <Button variant="contained" className="learn-more-button" size={"large"} sx={{borderRadius:"100px", boxShadow:"none", textTransform:"none", height:"70px", fontSize:"1.3rem", padding:"30px"}}>Learn More</Button>
             </Stack>
           </div>
         </Stack>

@@ -113,7 +113,9 @@ export default function Home() {
         <Stack direction="column">
           <div className="top-banner">
             <Typography variant="h2">PdNode Chat</Typography>
-
+            <Typography variant="h5">Instant messaging service for business</Typography>
+            <Button></Button>
+            <Button></Button>
           </div>
         </Stack>
       </div>

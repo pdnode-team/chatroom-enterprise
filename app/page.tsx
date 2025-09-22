@@ -57,7 +57,7 @@ export default function Home() {
       <div className="app-bar-light">
         <Stack direction="row" sx={{alignItems:"center"}}>
           <Stack direction="row" spacing={2}>
-            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+            <Stack direction="column" className="app-bar-button-container" spacing={0}>
               <Button href="/" varaint="contained" color="aqua"
                       sx={{
                         backgroundColor:"aqua.dark",
@@ -72,7 +72,7 @@ export default function Home() {
               </Button>
               <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
             </Stack>
-            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+            <Stack direction="column" className="app-bar-button-container" spacing={0}>
               <Button href="/pricing" varaint="contained" color="aqua"
                       sx={{backgroundColor:"aqua.main",
                         color:"white",
@@ -90,7 +90,21 @@ export default function Home() {
           <div style={{justifyContent:"space-between", width:"88%"}}/>
           <Stack sx={{justifyItems:"center", alignItems:"center", justifyContent:"center"}}>
             <Tooltip title="Account">
-              <IconButton href="https://www.pdnode.com" target="_blank" sx={{background:"none", outline:"#e3e3e3 solid 1.4px", borderRadius:"100px", width:"3rem", height:"3rem"}}><AccountCircleIcon sx={{color:"#e3e3e3", fontSize:"1.7rem"}}/></IconButton>
+              <IconButton target="_blank"
+                          sx={{background:"none",
+                            color:"#e3e3e3",
+                            outline:"#e3e3e3 solid 1.4px",
+                            borderRadius:"100px",
+                            width:"3rem",
+                            height:"3rem",
+                            "&:hover": {
+                              outline:"#c3c3c3 solid 1.4px",
+                              color:"#c3c3c3",
+                            },
+                            transition:"outline 0.2s, color 0.2s"
+              }}>
+                <AccountCircleIcon sx={{fontSize:"1.7rem"}}/>
+              </IconButton>
             </Tooltip>
           </Stack>
         </Stack>

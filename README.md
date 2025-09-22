@@ -6,5 +6,5 @@
 
 **This codebase is not open source. Please carefully review the open source definition.**
 
-Pdnode 2025 © All rights reserved
+© PdNode 2025. All rights reserved.
 

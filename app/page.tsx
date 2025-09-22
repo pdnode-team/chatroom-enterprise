@@ -112,10 +112,12 @@ export default function Home() {
       <div style={{justifyContent:"center", justifyItems:"center", marginTop:"4vh"}}>
         <Stack direction="column">
           <div className="top-banner">
-            <Typography variant="h2">PdNode Chat</Typography>
+            <Typography variant="h2">PdNode Chat Enterprise</Typography>
             <Typography variant="h5">Instant messaging service for business</Typography>
-            <Button></Button>
-            <Button></Button>
+            <Stack direction="row" spacing={2} sx={{marginTop:"2vh"}}>
+              <Button variant="contained">View Pricing</Button>
+              <Button variant="contained">Learn More</Button>
+            </Stack>
           </div>
         </Stack>
       </div>

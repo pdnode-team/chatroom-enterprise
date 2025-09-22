@@ -38,7 +38,7 @@ body {
 }
 
 .top-banner {
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   background: #000000;
   width: 94vw;

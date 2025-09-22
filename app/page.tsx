@@ -87,8 +87,8 @@ export default function Home() {
               <Link href="/pricing" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Pricing</Typography></Link>
             </Stack>
           </Stack>
-          <div style={{justifyContent:"space-between", width:"88%"}}/>
-          <Stack sx={{justifyItems:"center", alignItems:"center", justifyContent:"center"}}>
+          <div style={{justifyContent:"space-between", width:"100%"}}/>
+          <Stack sx={{justifyItems:"center", alignItems:"center", justifyContent:"center", marginRight:"15px"}}>
             <Tooltip title="Account">
               <IconButton target="_blank"
                           sx={{background:"none",

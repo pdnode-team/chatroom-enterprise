@@ -44,3 +44,11 @@ body {
   width: 94vw;
   border-radius: 20px;
 }
+
+.pricing-button {
+  border-radius: 16px;
+}
+
+.learn-more-button {
+  border-radius: 24px;
+}

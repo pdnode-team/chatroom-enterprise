@@ -9,6 +9,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Tooltip from "@mui/material/Tooltip";
 
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import SellIcon from '@mui/icons-material/Sell';
 
@@ -53,42 +54,45 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
-      <div style={{alignItems:"center"}}>
-        <Stack direction="row" spacing={2} className="app-bar-light">
-          <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
-            <Button href="/" varaint="contained" color="aqua"
-                    sx={{
-                      backgroundColor:"aqua.dark",
-                      color:"white",
-                      borderRadius:"100px",
-                      height:"3.4vh",
-                      "&:hover": {
-                        backgroundColor: (theme) => darken(theme.palette.aqua.dark, 0.2),
-                      },
-            }}>
-              <HomeIcon sx={{fontSize:"2.5vh"}}/>
-            </Button>
-            <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
+      <div className="app-bar-light">
+        <Stack direction="row" sx={{alignItems:"center"}}>
+          <Stack direction="row" spacing={2}>
+            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+              <Button href="/" varaint="contained" color="aqua"
+                      sx={{
+                        backgroundColor:"aqua.dark",
+                        color:"white",
+                        borderRadius:"100px",
+                        height:"3.4vh",
+                        "&:hover": {
+                          backgroundColor: (theme) => darken(theme.palette.aqua.dark, 0.2),
+                        },
+              }}>
+                <HomeIcon sx={{fontSize:"2.5vh"}}/>
+              </Button>
+              <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
+            </Stack>
+            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+              <Button href="/pricing" varaint="contained" color="aqua"
+                      sx={{backgroundColor:"aqua.main",
+                        color:"white",
+                        borderRadius:"100px",
+                        height:"3.4vh",
+                        "&:hover": {
+                          backgroundColor: (theme) => darken(theme.palette.aqua.main, 0.2),
+                        },
+              }}>
+                <SellIcon sx={{fontSize:"2.2vh"}}/>
+              </Button>
+              <Link href="/pricing" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Pricing</Typography></Link>
+            </Stack>
           </Stack>
-          <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
-            <Button href="/pricing" varaint="contained" color="aqua"
-                    sx={{backgroundColor:"aqua.main",
-                      color:"white",
-                      borderRadius:"100px",
-                      height:"3.4vh",
-                      "&:hover": {
-                        backgroundColor: (theme) => darken(theme.palette.aqua.main, 0.2),
-                      },
-            }}>
-              <SellIcon sx={{fontSize:"2.2vh"}}/>
-            </Button>
-            <Link href="/pricing" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Pricing</Typography></Link>
+          <div style={{justifyContent:"space-between", width:"88%"}}/>
+          <Stack sx={{justifyItems:"center", alignItems:"center", justifyContent:"center"}}>
+            <Tooltip title="Account">
+              <IconButton href="https://www.pdnode.com" target="_blank" sx={{background:"none", outline:"#e3e3e3 solid 1.4px", borderRadius:"100px", width:"3rem", height:"3rem"}}><AccountCircleIcon sx={{color:"#e3e3e3", fontSize:"1.7rem"}}/></IconButton>
+            </Tooltip>
           </Stack>
-        </Stack>
-        <Stack sx={{justifyItems:"center", alignItems:"center", justifyContent:"center"}}>
-          <Tooltip title="Visit Main Website">
-            <IconButton href="https://www.pdnode.com" target="_blank" sx={{background:"none", outline:"#555555FF solid 1px", borderRadius:"100px", width:"3rem", height:"3rem"}}><HomeIcon sx={{color:"rgb(108,108,108)", fontSize:"1.7rem"}}/></IconButton>
-          </Tooltip>
         </Stack>
       </div>
     </ThemeProvider>

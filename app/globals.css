@@ -26,9 +26,11 @@ body {
 }
 
 .app-bar-light {
+  width: 100%;
+  align-content: center;
   align-items: center;
   background: #2c9bd8;
-  height: 75px;
+  height: 80px;
 }
 
 .app-bar-button-container {

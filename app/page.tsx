@@ -56,8 +56,8 @@ export default function Home() {
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
       <div className="app-bar-light">
         <Stack direction="row" sx={{alignItems:"center"}}>
-          <Stack direction="row" spacing={2}>
-            <Stack direction="column" className="app-bar-button-container" spacing={0}>
+          <Stack direction="row" spacing={2} sx={{marginLeft:"20px"}}>
+            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
               <Button href="/" varaint="contained" color="aqua"
                       sx={{
                         backgroundColor:"aqua.dark",
@@ -72,7 +72,7 @@ export default function Home() {
               </Button>
               <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
             </Stack>
-            <Stack direction="column" className="app-bar-button-container" spacing={0}>
+            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
               <Button href="/pricing" varaint="contained" color="aqua"
                       sx={{backgroundColor:"aqua.main",
                         color:"white",
@@ -107,6 +107,13 @@ export default function Home() {
               </IconButton>
             </Tooltip>
           </Stack>
+        </Stack>
+      </div>
+      <div style={{justifyContent:"center", justifyItems:"center", marginTop:"4vh"}}>
+        <Stack direction="column">
+          <div className="top-banner">
+            <Typography variant="h2">PdNode Chat</Typography>
+          </div>
         </Stack>
       </div>
     </ThemeProvider>

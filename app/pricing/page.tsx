@@ -1,6 +1,6 @@
 "use client";
 
-import "./globals.css";
+import "../globals.css";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { darken } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -110,45 +110,6 @@ export default function Home() {
               </IconButton>
             </Tooltip>
           </Stack>
-        </Stack>
-      </div>
-      <div style={{justifyContent:"center", justifyItems:"center", marginTop:"4vh"}}>
-        <Stack direction="column">
-          <div className="top-banner">
-            <Typography variant="h2" sx={{marginTop:"90px"}}>PdNode Chat Enterprise</Typography>
-            <Typography variant="h5">Instant messaging service for business</Typography>
-            <Stack direction="row" spacing={0.3} sx={{marginTop:"2vh", marginBottom:"90px"}}>
-              <Button href="/pricing" variant="outlined" className="pricing-button" size={"large"}
-                      sx={{borderRadius:"13px",
-                        boxShadow:"none",
-                        textTransform:"none",
-                        borderWidth:" 3px",
-                        height:"70px",
-                        fontSize:"1.3rem",
-                        padding:"25px",
-                        "&:hover": {
-                          padding: "30px",
-                        },
-                        transition:"padding 0.2s"
-              }}>
-                View Pricing
-              </Button>
-              <Button variant="contained" className="learn-more-button" size={"large"}
-                      sx={{borderRadius:"100px",
-                        boxShadow:"none",
-                        textTransform:"none",
-                        height:"70px",
-                        fontSize:"1.3rem",
-                        padding:"30px",
-                        "&:hover": {
-                          padding: "35px",
-                        },
-                        transition:"padding 0.2s"
-              }}>
-                Learn More
-              </Button>
-            </Stack>
-          </div>
         </Stack>
       </div>
       <footer style={{position:"fixed", bottom:"7px", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>

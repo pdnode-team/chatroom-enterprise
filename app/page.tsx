@@ -1,5 +1,6 @@
 "use client";
 
+import "./globals.css";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { darken } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -112,9 +113,9 @@ export default function Home() {
       <div style={{justifyContent:"center", justifyItems:"center", marginTop:"4vh"}}>
         <Stack direction="column">
           <div className="top-banner">
-            <Typography variant="h2" sx={{marginTop:"20px"}}>PdNode Chat Enterprise</Typography>
+            <Typography variant="h2" sx={{marginTop:"90px"}}>PdNode Chat Enterprise</Typography>
             <Typography variant="h5">Instant messaging service for business</Typography>
-            <Stack direction="row" spacing={0.3} sx={{marginTop:"2vh", marginBottom:"20px"}}>
+            <Stack direction="row" spacing={0.3} sx={{marginTop:"2vh", marginBottom:"90px"}}>
               <Button variant="outlined" className="pricing-button" size={"large"}
                       sx={{borderRadius:"13px",
                         boxShadow:"none",
@@ -148,6 +149,9 @@ export default function Home() {
           </div>
         </Stack>
       </div>
+      <footer style={{position:"fixed", bottom:"7px", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
+        <Typography sx={{color: "#505050", fontSize:"0.9rem"}}>Copyright © 2025 PdNode. All rights reserved.</Typography>
+      </footer>
     </ThemeProvider>
   );
 }

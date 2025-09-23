@@ -45,6 +45,7 @@ theme = createTheme(theme, {
     aqua: theme.palette.augmentColor({
       color: {
         main: '#0085cc',
+        primary: '#3388bd',
       },
       name: 'aqua',
     }),
@@ -57,9 +58,8 @@ export default function Home() {
       <title>PdNode Chat Enterprise - Instant messaging service for business</title>
       <div className="app-bar-light">
         <Stack direction="row" sx={{alignItems:"center"}}>
-          <Stack direction="row" spacing={2} sx={{marginLeft:"20px"}}>
-            <Button variant="contained" sx={{height:"50px", boxShadow:"none"}}>pdnode-chat-icon.png</Button>
-            <div style={{width:"10px"}}/> {/* 纯占地 */}
+          <Stack direction="row" spacing={2} sx={{marginLeft:"20px", alignItems:"center", alignContent:"center"}}>
+            <Button sx={{height:"55px", boxShadow:"none", backgroundColor:"aqua.primary", width:"150px", borderRadius:"16px"}}>pdnode-chat-icon.png</Button>
             <Stack direction="column" className="app-bar-button-container">
               <Button href="/" varaint="contained" color="aqua"
                       sx={{

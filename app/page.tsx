@@ -58,7 +58,7 @@ export default function Home() {
       <div className="app-bar-light">
         <Stack direction="row" sx={{alignItems:"center"}}>
           <Stack direction="row" spacing={2} sx={{marginLeft:"20px"}}>
-            <Button variant="contained" sx={{height:"50px"}}>pdnode-chat-icon.png</Button>
+            <Button variant="contained" sx={{height:"50px", boxShadow:"none"}}>pdnode-chat-icon.png</Button>
             <div style={{width:"10px"}}/> {/* 纯占地 */}
             <Stack direction="column" className="app-bar-button-container">
               <Button href="/" varaint="contained" color="aqua"

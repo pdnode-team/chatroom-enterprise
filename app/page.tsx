@@ -58,7 +58,9 @@ export default function Home() {
       <div className="app-bar-light">
         <Stack direction="row" sx={{alignItems:"center"}}>
           <Stack direction="row" spacing={2} sx={{marginLeft:"20px"}}>
-            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+            <Button variant="contained" sx={{height:"50px"}}>pdnode-chat-icon.png</Button>
+            <div style={{width:"10px"}}/> {/* 纯占地 */}
+            <Stack direction="column" className="app-bar-button-container">
               <Button href="/" varaint="contained" color="aqua"
                       sx={{
                         backgroundColor:"aqua.dark",
@@ -73,7 +75,7 @@ export default function Home() {
               </Button>
               <Link href="/" sx={{textDecoration:"none"}}><Typography sx={{color:"#e3e3e3", fontSize:"0.88rem"}}>Home</Typography></Link>
             </Stack>
-            <Stack direction="column" className="app-bar-button-container" spacing={0.2}>
+            <Stack direction="column" className="app-bar-button-container">
               <Button href="/pricing" varaint="contained" color="aqua"
                       sx={{backgroundColor:"aqua.main",
                         color:"white",

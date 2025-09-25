@@ -112,6 +112,8 @@ export default function Home() {
           </Stack>
         </Stack>
       </div>
+      <Typography variant="h1">Pricing</Typography>
+      <Typography variant="h4">Choose the plan that suits you.</Typography>
       <footer style={{position:"fixed", bottom:"7px", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
         <Typography sx={{color: "#505050", fontSize:"0.9rem"}}>Copyright © 2025 PdNode. All rights reserved.</Typography>
       </footer>

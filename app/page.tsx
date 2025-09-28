@@ -152,7 +152,7 @@ export default function Home() {
         </Stack>
       </div>
       <footer style={{position:"fixed", bottom:"7px", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
-        <Typography sx={{color: "#505050", fontSize:"0.9rem"}}>Copyright © 2025 PdNode. All rights reserved.</Typography>
+        <Typography sx={{color: "#505050", fontSize:"0.9rem"}}>Copyright © 2025 PdNode LLC. All rights reserved.</Typography>
       </footer>
     </ThemeProvider>
   );

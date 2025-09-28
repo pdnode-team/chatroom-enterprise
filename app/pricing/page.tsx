@@ -112,8 +112,10 @@ export default function Home() {
           </Stack>
         </Stack>
       </div>
-      <Typography variant="h1" sx={{color:"#505050"}}>Pricing</Typography>
-      <Typography variant="h4" sx={{color:"#505050"}}>Choose the plan that suits you.</Typography>
+      <Stack sx={{alignItems:"center", justifyContent:"center", marginTop:"10vh"}}>
+        <Typography variant="h1" sx={{color:"#505050"}}>Pricing</Typography>
+        <Typography variant="h4" sx={{color:"#505050"}}>Choose the plan that suits you.</Typography>
+      </Stack>
       <footer style={{position:"fixed", bottom:"7px", width:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
         <Typography sx={{color: "#505050", fontSize:"0.9rem"}}>Copyright © 2025 PdNode. All rights reserved.</Typography>
       </footer>
